@@ -5,6 +5,9 @@ const nextConfig = {
     assetPrefix: isProd ? '/bicycle-shop/' : '',
     basePath: isProd ? '/bicycle-shop' : '',
     trailingSlash: true, 
+    images: {
+      unoptimized: true, // Disable Image Optimization
+    },
 };
 
 export default nextConfig;

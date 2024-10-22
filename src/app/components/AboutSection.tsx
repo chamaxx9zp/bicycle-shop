@@ -43,10 +43,10 @@ export default function AboutSection() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <p className="text-lg text-gray-300 mb-4">
-              At BikeLife, we're passionate about creating the perfect riding experience. Our team of expert engineers and designers work tirelessly to bring you cutting-edge bicycle technology that pushes the boundaries of performance and style.
+              At BikeLife, we&apos;re passionate about creating the perfect riding experience. Our team of expert engineers and designers work tirelessly to bring you cutting-edge bicycle technology that pushes the boundaries of performance and style.
             </p>
             <p className="text-lg text-gray-300">
-              The BikeLife Pro is the culmination of years of research and development, resulting in a bicycle that's not just a mode of transportation, but an extension of your lifestyle.
+              The BikeLife Pro is the culmination of years of research and development, resulting in a bicycle that&apos;s not just a mode of transportation, but an extension of your lifestyle.
             </p>
           </motion.div>
           <motion.div

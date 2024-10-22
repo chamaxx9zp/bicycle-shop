@@ -3,7 +3,6 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
-import HeroImage from '../public/images/herosection/hero.jpg'
 import Cyclist1 from '../public/images/testimonial/cyclist1.jpg'
 import Cyclist2 from '../public/images/testimonial/cyclist2.jpg'
 import Cyclist3 from '../public/images/testimonial/cyclist3.jpg'

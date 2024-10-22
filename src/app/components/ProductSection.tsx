@@ -5,8 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from "@/components/ui/button"
 import React, { useState, useEffect } from 'react'
-import { ChevronLeft, ChevronRight,  Menu, X, Bike, ShoppingBag, DollarSign, Tag, ChevronDown, Search } from 'lucide-react'
-import HeroImage from '../public/images/herosection/hero.jpg'
+import { ChevronLeft, ChevronRight, Bike, ShoppingBag, DollarSign, Tag, } from 'lucide-react'
 import Bicycle1 from '../public/images/imagegallery/bicycle1.jpg'
 import Bicycle2 from '../public/images/imagegallery/bicycle2.jpg'
 import Bicycle3 from '../public/images/imagegallery/bicycle3.jpg'
