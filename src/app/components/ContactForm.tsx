@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { Button } from "@/components/ui/button"
 
 export default function ContactForm() {
   return (
@@ -28,9 +29,9 @@ export default function ContactForm() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <Link href="#" className="inline-block bg-[#2db53f] text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-[#2db53f] transition-colors">
-              Order Now
-            </Link>
+            <Button asChild variant="primary">
+                <Link href="/">Learn More</Link>
+            </Button>
           </motion.div>
         </div>
     </section>

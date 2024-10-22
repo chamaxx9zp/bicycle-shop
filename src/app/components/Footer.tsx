@@ -1,33 +1,37 @@
 import React from 'react'
-import { Phone, Mail, MapPin, Facebook, Twitter, Youtube } from 'lucide-react'
+import { Phone, Mail, MapPin, Facebook, Twitter, Youtube, } from 'lucide-react'
 import Link from 'next/link';
+
 
 export default function Footer() {
   return (
     <footer className="bg-[#1b1f1b] text-white pt-8">
       {/* Top contact bar */}
       <div className="container mx-auto px-4 mb-8">
-        <div className="border border-teal-800 p-4 flex flex-col md:flex-row justify-between items-start md:items-center text-sm">
-          <div className="flex items-center mb-2 md:mb-0">
-            <Phone className="w-5 h-5 mr-2" />
+        <div className="border p-4 flex flex-col md:flex-row justify-between items-start md:items-center text-sm">
+          <div className="flex items-center mb-4 md:mb-0 w-full md:w-1/3">
+            <Phone className="w-5 h-5 mr-2 flex-shrink-0" />
             <div>
               <div className="font-semibold">Call us</div>
-              <div>+94 74 1856 027</div>
+              <div>+94 767 619 133</div>
             </div>
           </div>
-          <div className="flex items-center mb-2 md:mb-0">
-            <Mail className="w-5 h-5 mr-2" />
+          <div className="hidden md:block w-px h-12 bg-white mx-4"></div>
+          <div className="w-full md:w-auto h-px md:h-auto bg-white my-4 md:my-0"></div>
+          <div className="flex items-center mb-4 md:mb-0 w-full md:w-1/3">
+            <Mail className="w-5 h-5 mr-2 flex-shrink-0" />
             <div>
               <div className="font-semibold">Write to us</div>
-              <div>bikelife@gmail.com</div>
+              <div>leisuretravelhub@gmail.com</div>
             </div>
           </div>
-          <div className="flex items-center">
-            <MapPin className="w-5 h-5 mr-2" />
+          <div className="hidden md:block w-px h-12 bg-white mx-4"></div>
+          <div className="w-full md:w-auto h-px md:h-auto bg-white my-4 md:my-0"></div>
+          <div className="flex items-center w-full md:w-1/3">
+            <MapPin className="w-5 h-5 mr-2 flex-shrink-0" />
             <div>
               <div className="font-semibold">Address</div>
-              <div>20/11A, St. Anne's Garden,</div>
-              <div>Wattala, 11300</div>
+              <div>30, Weboda Road, Negombo,</div>
               <div>Sri Lanka</div>
             </div>
           </div>
@@ -100,7 +104,8 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="container mx-auto bg-[#285238] px-4 text-xs border-t border-[#285238] py-4 flex justify-between items-center">
+      <div className="bg-[#285238]">
+      <div className="container mx-auto px-4 text-xs border-t border-[#285238] py-4 flex justify-between items-center">
         <div>Copyright © 2024 Bike Life (Pvt) Ltd. All Rights Reserved.</div>
         <div>
           Designed & Developed By{" "}
@@ -109,6 +114,8 @@ export default function Footer() {
           </a>
         </div>
       </div>
+      </div>
+     
     </footer>
   );
 }

@@ -26,7 +26,8 @@ const brands = [
 export default function AboutSection() {
   return (
     <section id="about">
-      <div className="container mx-auto px-4 py-16 bg-[#285238]">
+      <div className="bg-[#285238]">
+      <div className="container mx-auto px-4 py-16">
         <motion.h2 
           initial={{ opacity: 0, y: 20 }} 
           whileInView={{ opacity: 1, y: 0 }} 
@@ -64,6 +65,8 @@ export default function AboutSection() {
           </motion.div>
         </div>
       </div>
+      </div>
+      
 
       {/* Featured Brands Section */}
       <div className="bg-[#1b1f1b]">
