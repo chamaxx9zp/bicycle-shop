@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import HeroImage from '../public/images/herosection/hero.png'
+import HeroImage from '../public/images/herosection/hero.jpg'
 
 export default function HeroSection() {
   return (
@@ -21,7 +21,7 @@ export default function HeroSection() {
         <h1 className="text-6xl md:text-8xl font-bold mb-4 text-white">SPORT BICYCLES</h1>
         <p className="text-xl md:text-2xl mb-8 text-gray-300">Handcrafted for Peak Performance</p>
         <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-          <Link href="#product" className="bg-red-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-red-700 transition-colors">
+          <Link href="#product" className="bg-[#2db53f] text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-[#2db53f] transition-colors">
             Discover Now
           </Link>
         </motion.div>
