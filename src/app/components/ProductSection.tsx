@@ -3,87 +3,75 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Button } from "@/components/ui/button"
-import React, { useState, useEffect } from 'react'
-import { ChevronLeft, ChevronRight, Bike, ShoppingBag, DollarSign, Tag, } from 'lucide-react'
-import Bicycle1 from '../public/images/imagegallery/bicycle1.jpg'
-import Bicycle2 from '../public/images/imagegallery/bicycle2.jpg'
-import Bicycle3 from '../public/images/imagegallery/bicycle3.jpg'
-import Bicycle4 from '../public/images/imagegallery/bicycle4.jpg'
-import Bicycle5 from '../public/images/imagegallery/bicycle5.jpg'
-import Bicycle6 from '../public/images/imagegallery/bicycle6.jpg'
-import Bicycle7 from '../public/images/imagegallery/bicycle7.jpg'
-import Bicycle8 from '../public/images/imagegallery/bicycle8.jpg'
-import Bicycle9 from '../public/images/imagegallery/bicycle9.jpg'
+import { Button } from '@/components/ui/button';
+import React, { useState, useEffect } from 'react';
+import { ChevronLeft, ChevronRight, Bike, ShoppingBag, DollarSign, Tag } from 'lucide-react';
+import Bicycle1 from '../public/images/imagegallery/bicycle1.jpg';
+import Bicycle2 from '../public/images/imagegallery/bicycle2.jpg';
+import Bicycle3 from '../public/images/imagegallery/bicycle3.jpg';
+import Bicycle4 from '../public/images/imagegallery/bicycle4.jpg';
+import Bicycle5 from '../public/images/imagegallery/bicycle5.jpg';
+import Bicycle6 from '../public/images/imagegallery/bicycle6.jpg';
+import Bicycle7 from '../public/images/imagegallery/bicycle7.jpg';
+import Bicycle8 from '../public/images/imagegallery/bicycle8.jpg';
+import Bicycle9 from '../public/images/imagegallery/bicycle9.jpg';
 
-
-
+// Images array
 const images = [
-    {
-      src: Bicycle1,
-      alt: "Mountain bike on rocky trail",
-      caption: "Conquer the toughest trails with the Thunderbolt XT Mountain Bike",
-    },
-    {
-      src: Bicycle2,
-      alt: "City bike on a street",
-      caption: "Cruise through urban landscapes with the UrbanGlide City Cruiser",
-    },
-    {
-      src: Bicycle3,
-      alt: "Racing bike on open road",
-      caption: "Push the limits of speed with the VelocityPro Road Racer",
-    },
-    {
-      src: Bicycle4,
-      alt: "Electric bike in park",
-      caption: "Effortless commutes with the EcoDrive Electric Commuter",
-    },
-    {
-      src: Bicycle5,
-      alt: "Hybrid bike on a country road",
-      caption: "Versatility at its finest with the AllRoad Hybrid Bicycle",
-    },
-    {
-      src: Bicycle6,
-      alt: "Folding bike by the river",
-      caption: "Compact and portable, meet the FoldX Travel Bicycle",
-    },
-    {
-      src: Bicycle7,
-      alt: "Fat tire bike on snowy terrain",
-      caption: "Tackle any surface with the Avalanche Fat Tire Bike",
-    },
-    {
-      src: Bicycle8,
-      alt: "Kid riding a colorful bicycle",
-      caption: "Adventure for the young ones with the Kiddo Cruiser",
-    },
-    {
-      src: Bicycle9,
-      alt: "Touring bike on coastal highway",
-      caption: "Embark on long-distance journeys with the Horizon Touring Bike",
-    },
-  ];
+  { src: Bicycle1, alt: 'Mountain bike on rocky trail', caption: 'Conquer the toughest trails with the Thunderbolt XT Mountain Bike' },
+  { src: Bicycle2, alt: 'City bike on a street', caption: 'Cruise through urban landscapes with the UrbanGlide City Cruiser' },
+  { src: Bicycle3, alt: 'Racing bike on open road', caption: 'Push the limits of speed with the VelocityPro Road Racer' },
+  { src: Bicycle4, alt: 'Electric bike in park', caption: 'Effortless commutes with the EcoDrive Electric Commuter' },
+  { src: Bicycle5, alt: 'Hybrid bike on a country road', caption: 'Versatility at its finest with the AllRoad Hybrid Bicycle' },
+  { src: Bicycle6, alt: 'Folding bike by the river', caption: 'Compact and portable, meet the FoldX Travel Bicycle' },
+  { src: Bicycle7, alt: 'Fat tire bike on snowy terrain', caption: 'Tackle any surface with the Avalanche Fat Tire Bike' },
+  { src: Bicycle8, alt: 'Kid riding a colorful bicycle', caption: 'Adventure for the young ones with the Kiddo Cruiser' },
+  { src: Bicycle9, alt: 'Touring bike on coastal highway', caption: 'Embark on long-distance journeys with the Horizon Touring Bike' }
+];
+
+// Key features array
+const features = [
+  {
+    icon: Bike,
+    title: 'Eco-Friendly',
+    description: 'Zero emissions, 100% sustainable',
+  },
+  {
+    icon: ShoppingBag,
+    title: 'Convenient',
+    description: 'Easy to use and maintain',
+  },
+  {
+    icon: DollarSign,
+    title: 'Cost-Effective',
+    description: 'Save money on transportation',
+  },
+  {
+    icon: Tag,
+    title: 'Stylish',
+    description: 'Modern design that turns heads',
+  },
+];
 
 export default function ProductSection() {
-    const [currentSlide, setCurrentSlide] = useState(0)
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-    useEffect(() => {
-      const timer = setInterval(() => {
-        setCurrentSlide((prevSlide) => (prevSlide + 1) % images.length)
-      }, 5000)
-  
-      return () => clearInterval(timer)
-    }, [])
-  
-    const nextSlide = () => {
-      setCurrentSlide((prevSlide) => (prevSlide + 1) % images.length)
-    }
-  
-    const prevSlide = () => {
-      setCurrentSlide((prevSlide) => (prevSlide - 1 + images.length) % images.length)
-    }
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % images.length);
+    }, 5000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  const nextSlide = () => {
+    setCurrentSlide((prevSlide) => (prevSlide + 1) % images.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prevSlide) => (prevSlide - 1 + images.length) % images.length);
+  };
+
   return (
     <section id="product" className="py-16 bg-[#285238]">
       <div className="container mx-auto px-4">
@@ -110,7 +98,7 @@ export default function ProductSection() {
                 <div
                   key={index}
                   className={`absolute top-0 left-0 w-full h-full transition-opacity bg-black duration-500 ease-in-out ${
-                    index === currentSlide ? "opacity-100" : "opacity-0"
+                    index === currentSlide ? 'opacity-100' : 'opacity-0'
                   }`}
                 >
                   {/* Image with Overlay */}
@@ -128,9 +116,7 @@ export default function ProductSection() {
 
                   {/* Caption */}
                   <div className="absolute bottom-8 left-4 right-4 mr-[100px] p-2 rounded">
-                    <p className="text-base font-semibold text-white">
-                      {image.caption}
-                    </p>
+                    <p className="text-base font-semibold text-white">{image.caption}</p>
                   </div>
                 </div>
               ))}
@@ -162,50 +148,15 @@ export default function ProductSection() {
               Key Features
             </h3>
             <div className="grid grid-cols-2 gap-4">
-              {[
-                {
-                  icon: Bike,
-                  title: "Eco-Friendly",
-                  description: "Zero emissions, 100% sustainable",
-                },
-                {
-                  icon: ShoppingBag,
-                  title: "Convenient",
-                  description: "Easy to use and maintain",
-                },
-                {
-                  icon: DollarSign,
-                  title: "Cost-Effective",
-                  description: "Save money on transportation",
-                },
-                {
-                  icon: Tag,
-                  title: "Stylish",
-                  description: "Modern design that turns heads",
-                },
-              ].map((item, index) => (
-                <motion.div
-                  key={item.title}
-                  className="text-center"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                >
-                  <item.icon
-                    size={48}
-                    className="mx-auto mb-4 text-[#18FF6D]"
-                  />
+              {features.map((item, index) => (
+                <div key={index} className="text-center">
+                  <item.icon size={48} className="mx-auto mb-4 text-[#18FF6D]" />
                   <h3 className="font-semibold mb-2">{item.title}</h3>
                   <p>{item.description}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="mt-6 text-center"
-            >
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="mt-6 text-center">
               <Button asChild variant="primary">
                 <Link href="/">Learn More</Link>
               </Button>
