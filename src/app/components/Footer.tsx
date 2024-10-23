@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1b1f1b] text-white pt-8">
+    <footer className="bg-[rgb(27,31,27)] text-white pt-8">
       {/* Top contact bar */}
       <div className="container mx-auto px-4 mb-8">
         <div className="border p-4 flex flex-col md:flex-row justify-between items-start md:items-center text-sm">
@@ -13,7 +13,7 @@ export default function Footer() {
             <Phone className="w-5 h-5 mr-2 flex-shrink-0" />
             <div>
               <div className="font-semibold">Call us</div>
-              <div>+94 767 619 133</div>
+              <div>+94 74 1856 027 </div>
             </div>
           </div>
           <div className="hidden md:block w-px h-12 bg-white mx-4"></div>
@@ -22,7 +22,7 @@ export default function Footer() {
             <Mail className="w-5 h-5 mr-2 flex-shrink-0" />
             <div>
               <div className="font-semibold">Write to us</div>
-              <div>leisuretravelhub@gmail.com</div>
+              <div>bikelife@gmail.com</div>
             </div>
           </div>
           <div className="hidden md:block w-px h-12 bg-white mx-4"></div>
@@ -31,7 +31,7 @@ export default function Footer() {
             <MapPin className="w-5 h-5 mr-2 flex-shrink-0" />
             <div>
               <div className="font-semibold">Address</div>
-              <div>30, Weboda Road, Negombo,</div>
+              <div>20/11A, St. Anne&apos;s Garden,Wattala, 11300</div>
               <div>Sri Lanka</div>
             </div>
           </div>
@@ -41,8 +41,7 @@ export default function Footer() {
       {/* Main footer content */}
       <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
         {/* Company info */}
-        <div>
-          {/* <img src="/placeholder.svg?height=50&width=200" alt="Bike Life" className="mb-4" /> */}
+        <div className=''>
           <Link href="/" className="text-2xl font-bold text-[#18ff6d]">
             BikeLife
           </Link>
@@ -104,8 +103,8 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="bg-[#285238]">
-      <div className="container mx-auto px-4 text-xs border-t border-[#285238] py-4 flex justify-between items-center">
+      <div className="bg-[#285238] text-center">
+      <div className="container mx-auto px-4 text-xs border-t border-[#285238] py-4 md:flex md:justify-between items-center">
         <div>Copyright © 2024 Bike Life (Pvt) Ltd. All Rights Reserved.</div>
         <div>
           Designed & Developed By{" "}
